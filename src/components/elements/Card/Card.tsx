@@ -6,7 +6,8 @@ interface Props {
 	demo: Demo
 }
 
-export const Card = ({ demo }: Props) => {
+export const Card: React.FC<Props> = (props) => {
+	const { demo } = props
 	const [loaded, setLoaded] = useState(false)
 
 	return (

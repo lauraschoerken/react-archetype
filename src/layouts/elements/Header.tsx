@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import LanguageSelect from '@/components/elements/Languague/LanguagueSelect'
 import '../layout.scss'
 import { APP_NAME } from '@/utils/constants'
-import ThemeToggle from '@/components/elements/Theme/ThemeToggle'
+import { ThemeToggle } from '@/components/elements/Theme/ThemeToggle'
 
-export default function Header() {
+export const Header = () => {
 	const active = 'link-active'
 	const { t } = useTranslation()
 

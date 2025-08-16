@@ -3,7 +3,7 @@ import { applyTheme, getInitialTheme } from './theme'
 import { ThemeContext } from './theme-context'
 import type { Theme } from '@/models/utils/Theme'
 
-export default function ThemeProvider({ children }: { children: React.ReactNode }) {
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 	const [theme, setTheme] = useState<Theme>('light')
 
 	useEffect(() => {

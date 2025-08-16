@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { AVAILABLE_LANGS } from '@/utils/constants'
 import './LanguageSelect.scss'
 
-export default function LanguageSelect() {
+const LanguageSelect = () => {
 	const { i18n } = useTranslation()
 	const initial = i18n.language?.split('-')[0] || 'es'
 	const [open, setOpen] = useState(false)
@@ -89,3 +89,4 @@ export default function LanguageSelect() {
 		</div>
 	)
 }
+export default LanguageSelect

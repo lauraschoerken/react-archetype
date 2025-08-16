@@ -9,10 +9,10 @@ interface Props {
 	error?: string
 }
 
-export default function DemoComponent({ loading, error, demos, onReload }: Props) {
+const DemoComponent: React.FC<Props> = (props) => {
+	const { loading, error, demos, onReload } = props
 	const hasData = demos.length > 0
 
-	// Si no hay datos aún y está cargando → skeletons
 	if (loading && !hasData) {
 		return (
 			<div className='demo-grid'>
@@ -29,7 +29,6 @@ export default function DemoComponent({ loading, error, demos, onReload }: Props
 		)
 	}
 
-	// Si hay error y no hay datos previos → muestra error
 	if (error && !hasData) {
 		return (
 			<div className='demo-error'>
@@ -39,7 +38,6 @@ export default function DemoComponent({ loading, error, demos, onReload }: Props
 		)
 	}
 
-	// Caso general: mostramos datos; si loading, enseñamos estado "actualizando"
 	return (
 		<div>
 			<div className='demo-toolbar'>
@@ -59,3 +57,5 @@ export default function DemoComponent({ loading, error, demos, onReload }: Props
 		</div>
 	)
 }
+
+export default DemoComponent

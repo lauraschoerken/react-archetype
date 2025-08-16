@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
-import MainLayout from '../layouts/Main/MainLayout'
-import Home from '../components/Home/containers/Home'
+import { MainLayout } from '../layouts/Main/MainLayout'
 import Demo from '../components/Demo/containers/Demo'
+import { Home } from '@/components/Home/containers/Home'
 
 //import NotFound from './components/NotFound'
 
