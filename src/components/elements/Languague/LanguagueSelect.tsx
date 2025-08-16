@@ -3,14 +3,13 @@ import { useTranslation } from 'react-i18next'
 import { AVAILABLE_LANGS } from '@/utils/constants'
 import './LanguageSelect.scss'
 
-export default function CustomLanguageSelect() {
+export default function LanguageSelect() {
 	const { i18n } = useTranslation()
 	const initial = i18n.language?.split('-')[0] || 'es'
 	const [open, setOpen] = useState(false)
 	const [active, setActive] = useState(initial)
 	const wrapRef = useRef<HTMLDivElement>(null)
 
-	// cerrar al click fuera
 	useEffect(() => {
 		const onDoc = (e: MouseEvent) => {
 			if (!wrapRef.current?.contains(e.target as Node)) setOpen(false)
@@ -19,7 +18,6 @@ export default function CustomLanguageSelect() {
 		return () => document.removeEventListener('mousedown', onDoc)
 	}, [])
 
-	// aplicar idioma
 	const apply = (code: string) => {
 		setActive(code)
 		i18n.changeLanguage(code)
@@ -31,7 +29,6 @@ export default function CustomLanguageSelect() {
 		setOpen(false)
 	}
 
-	// teclado
 	const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
 		const idx = AVAILABLE_LANGS.findIndex((l) => l.code === active)
 		if (e.key === 'ArrowDown') {
@@ -82,7 +79,7 @@ export default function CustomLanguageSelect() {
 							role='option'
 							aria-selected={l.code === active}
 							className={`cselect__option ${l.code === active ? 'is-active' : ''}`}
-							onMouseDown={(e) => e.preventDefault()} /* evita perder foco antes del click */
+							onMouseDown={(e) => e.preventDefault()}
 							onClick={() => apply(l.code)}>
 							{l.label}
 						</li>

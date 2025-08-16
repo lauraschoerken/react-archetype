@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import ThemeToggle from '@/utils/Theme/ThemeToggle'
-import LanguageSelect from '@/utils/Languague/LanguagueSelect'
+import LanguageSelect from '@/components/elements/Languague/LanguagueSelect'
 import '../layout.scss'
 import { APP_NAME } from '@/utils/constants'
 
