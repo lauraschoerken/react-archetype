@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
-import MainLayout from './components/Layout/MainLayout'
-import Home from './components/Home/containers/Home'
+import MainLayout from '../layouts/Main/MainLayout'
+import Home from '../components/Home/containers/Home'
+import Demo from '../components/Demo/containers/Demo'
 
 //import NotFound from './components/NotFound'
 
@@ -10,7 +11,7 @@ export const router = createBrowserRouter([
 		element: <MainLayout />,
 		children: [
 			{ index: true, element: <Home /> },
-			//{ path: 'about', element: <About /> },
+			{ path: 'demo', element: <Demo /> },
 			//{ path: '*', element: <NotFound /> },
 		],
 	},
