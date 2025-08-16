@@ -1,22 +1,21 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import general_en from './en/en.json'
-import general_es from './es/es.json'
+import en from './en'
+import es from './es'
 
 const LANGUAGE_KEY = 'lang'
-
 const detected =
 	(localStorage.getItem(LANGUAGE_KEY) as string | null) ??
 	(navigator.language?.startsWith('es') ? 'es' : 'en')
 
 void i18n.use(initReactI18next).init({
 	resources: {
-		es: { common: general_es },
-		en: { common: general_en },
+		es: { common: es },
+		en: { common: en },
 	},
 	lng: detected,
 	fallbackLng: 'es',
-	ns: ['common'],
+	ns: Object.keys(en), // p.ej. ["common","demo",...]
 	defaultNS: 'common',
 	interpolation: { escapeValue: false },
 	returnEmptyString: false,
@@ -25,8 +24,8 @@ void i18n.use(initReactI18next).init({
 i18n.on('languageChanged', (lng) => {
 	try {
 		localStorage.setItem(LANGUAGE_KEY, lng)
-	} catch (e) {
-		console.error('Error guardando idioma:', e)
+	} catch {
+		//
 	}
 })
 
