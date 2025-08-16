@@ -1,5 +1,6 @@
+import type { Theme } from '@/models/utils/Theme'
+
 const STORAGE_KEY = 'theme'
-export type Theme = 'light' | 'dark'
 
 export function getInitialTheme(): Theme {
 	const stored = localStorage.getItem(STORAGE_KEY) as Theme | null
