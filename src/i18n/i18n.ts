@@ -1,7 +1,7 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import general_en from './local/en/en.json'
-import general_es from './local/es/es.json'
+import general_en from './en/en.json'
+import general_es from './es/es.json'
 
 const LANGUAGE_KEY = 'lang'
 
