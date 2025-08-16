@@ -1,9 +1,9 @@
 import { RouterProvider } from 'react-router-dom'
-import I18nProvider from './providers/I18nProvider'
-import { router } from './routes'
+import I18nProvider from './i18n/I18nProvider'
+import { router } from './navigation/routes'
 
-import './styles/index.scss'
-import ThemeProvider from './providers/themeProvider'
+import '@/assets/styles/index.scss'
+import ThemeProvider from './utils/Theme/themeProvider'
 
 export default function App() {
 	return (
