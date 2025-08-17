@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react'
+
 import { fetchDemoMock } from '@/mocks/demo'
 import type { Demo } from '@/models/components/Demo'
-import { useEffect, useState } from 'react'
+
 import DemoComponent from '../components/DemoComponent'
 
 const DemoPageContainer = () => {

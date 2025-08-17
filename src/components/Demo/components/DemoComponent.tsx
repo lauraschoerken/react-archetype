@@ -1,6 +1,7 @@
-import type { Demo } from '@/models/components/Demo'
 import './DemoComponent.scss'
+
 import { Card as DemoCard } from '@/components/elements'
+import type { Demo } from '@/models/components/Demo'
 
 interface Props {
 	loading: boolean

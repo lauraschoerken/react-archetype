@@ -1,9 +1,11 @@
-import { Link, NavLink } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
-import LanguageSelect from '@/components/elements/Languague/LanguagueSelect'
 import '../layout.scss'
-import { APP_NAME } from '@/utils/constants'
+
+import { useTranslation } from 'react-i18next'
+import { Link, NavLink } from 'react-router-dom'
+
+import LanguageSelect from '@/components/elements/Languague/LanguagueSelect'
 import { ThemeToggle } from '@/components/elements/Theme/ThemeToggle'
+import { APP_NAME } from '@/utils/constants'
 
 export const Header = () => {
 	const active = 'link-active'

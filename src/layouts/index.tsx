@@ -1,4 +1,5 @@
 import './layout.scss'
+
 import { MainLayout } from './Main/MainLayout'
 import { MinimalLayout } from './Minimal/MinimalLayaout'
 

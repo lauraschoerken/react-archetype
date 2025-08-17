@@ -1,4 +1,5 @@
 import './HomeComponent.scss'
+
 import homeImage from '@/assets/home.svg'
 
 interface Props {

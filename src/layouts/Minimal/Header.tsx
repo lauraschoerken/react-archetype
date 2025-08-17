@@ -1,6 +1,8 @@
-import { Link, NavLink } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
 import '../layout.scss'
+
+import { useTranslation } from 'react-i18next'
+import { Link, NavLink } from 'react-router-dom'
+
 import { APP_NAME } from '@/utils/constants'
 
 export const Header = () => {

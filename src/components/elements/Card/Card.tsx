@@ -1,6 +1,8 @@
-import { useState } from 'react'
-import type { Demo } from '@/models/components/Demo'
 import './Card.scss'
+
+import { useState } from 'react'
+
+import type { Demo } from '@/models/components/Demo'
 
 interface Props {
 	demo: Demo

@@ -1,7 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
-import Demo from '../components/Demo/containers/Demo'
+
 import { Home } from '@/components/Home/containers/Home'
 import { IndexLayout } from '@/layouts'
+
+import Demo from '../components/Demo/containers/Demo'
 
 export const router = createBrowserRouter([
 	{

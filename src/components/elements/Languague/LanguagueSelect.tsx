@@ -1,7 +1,9 @@
+import './LanguageSelect.scss'
+
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+
 import { AVAILABLE_LANGS } from '@/utils/constants'
-import './LanguageSelect.scss'
 
 const LanguageSelect = () => {
 	const { i18n } = useTranslation()
