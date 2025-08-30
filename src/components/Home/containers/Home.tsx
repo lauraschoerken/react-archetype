@@ -1,12 +1,8 @@
 import { useState } from 'react'
 import HomeComponent from '../components/HomeComponent'
 
-interface Props {
-	title: string
-}
-
-const Card: React.FC<Props> = (props) => {
-	const { title } = props
+const Home = () => {
+	const title = 'Home'
 	const [counter, setCounter] = useState<number>(1)
 	const [name, setName] = useState<string>(`${title} ${counter}`)
 
@@ -18,7 +14,15 @@ const Card: React.FC<Props> = (props) => {
 		})
 	}
 
-	return <HomeComponent name={name} next={next} />
+	const before = () => {
+		setCounter((prev) => {
+			const newValue = prev - 1
+			setName(`${title} ${newValue}`)
+			return newValue
+		})
+	}
+
+	return <HomeComponent name={name} next={next} before={before} />
 }
 
-export default Card
+export default Home
