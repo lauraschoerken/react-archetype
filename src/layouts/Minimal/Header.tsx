@@ -3,8 +3,6 @@ import '../layout.scss'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
 
-import LanguageSelect from '@/components/elements/Languague/LanguagueSelect'
-import { ThemeToggle } from '@/components/elements/Theme/ThemeToggle'
 import { APP_NAME } from '@/utils/constants'
 
 export const Header = () => {
@@ -24,8 +22,6 @@ export const Header = () => {
 					<NavLink to='/demo' className={({ isActive }) => (isActive ? active : 'link')}>
 						{t('demo')}
 					</NavLink>
-					<ThemeToggle />
-					<LanguageSelect />
 				</nav>
 			</div>
 		</header>

@@ -3,9 +3,9 @@ import '../layout.scss'
 import { Outlet } from 'react-router-dom'
 
 import { Footer } from '../elements/Footer'
-import { Header } from '../elements/Header'
+import { Header } from './Header'
 
-export const MainLayout = () => {
+export const MinimalLayout = () => {
 	return (
 		<div className='main-layout'>
 			<Header />

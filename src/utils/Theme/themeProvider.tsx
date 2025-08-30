@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
-import { applyTheme, getInitialTheme } from './theme'
-import { ThemeContext } from './theme-context'
+
 import type { Theme } from '@/models/utils/Theme'
 
-export default function ThemeProvider({ children }: { children: React.ReactNode }) {
+import { applyTheme, getInitialTheme } from './theme'
+import { ThemeContext } from './theme-context'
+
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 	const [theme, setTheme] = useState<Theme>('light')
 
 	useEffect(() => {

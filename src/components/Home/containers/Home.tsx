@@ -1,28 +1,19 @@
 import { useState } from 'react'
+
 import HomeComponent from '../components/HomeComponent'
 
-const Home = () => {
+export const Home = () => {
 	const title = 'Home'
 	const [counter, setCounter] = useState<number>(1)
 	const [name, setName] = useState<string>(`${title} ${counter}`)
 
-	const next = () => {
+	const changeCounter = (delta: number) => {
 		setCounter((prev) => {
-			const newValue = prev + 1
+			const newValue = prev + delta
 			setName(`${title} ${newValue}`)
 			return newValue
 		})
 	}
 
-	const before = () => {
-		setCounter((prev) => {
-			const newValue = prev - 1
-			setName(`${title} ${newValue}`)
-			return newValue
-		})
-	}
-
-	return <HomeComponent name={name} next={next} before={before} />
+	return <HomeComponent name={name} onChangeCounter={changeCounter} />
 }
-
-export default Home

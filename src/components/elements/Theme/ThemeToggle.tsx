@@ -1,9 +1,12 @@
-import { ThemeContext } from '@/utils/Theme/theme-context'
-import { useContext } from 'react'
-import { SunIcon, MoonIcon } from './icons'
 import './ThemeToggle.scss'
 
-export default function ThemeToggle() {
+import { useContext } from 'react'
+
+import { ThemeContext } from '@/utils/Theme/theme-context'
+
+import { MoonIcon,SunIcon } from './icons'
+
+export const ThemeToggle = () => {
 	const { theme, toggle } = useContext(ThemeContext)
 
 	return (
